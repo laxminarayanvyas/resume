@@ -1,0 +1,81 @@
+.portfolio__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+/* .portfolio__item {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.portfolio__item:hover {
+    background-color: var(--color-primary-variant);
+    background: transparent;
+} */
+
+.portfolio__item {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: transform 1s ease, background-color 0.5s ease, box-shadow 0.5s ease; /* Slower transition */
+
+    display: flex; /* Add flexbox */
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center the text */
+    justify-content: space-between; /* Space between items */
+    height: 100%; /* Ensure the container takes full height */
+    max-height: 500px;
+    max-width: 350px;
+    /* overflow: hidden; */
+}
+
+.portfolio__item:hover {
+    background-color: var(--color-primary-variant);
+    background: transparent;
+    transform: scale(1.1); /* Grow the element */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.portfolio__item-image {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 70%;
+}
+.portfolio__item-description {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center the description */
+  }
+
+.portfolio__item h3 {
+    margin: 1.2rem 0 2rem;
+}
+
+.portfolio__item-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center; /* Center the buttons */   
+}
+
+@media screen and (max-width: 1024px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
