@@ -1,6 +1,7 @@
 import React from 'react'
 import mfa from '../../assets/mfa.jpg'
 import cms from '../../assets/cms.png'
+import chatapp from '../../assets/chatapp.png'
 import dashboard from '../../assets/dashboard.png'
 import ems from '../../assets/ems.jpg'
 
@@ -27,6 +28,14 @@ const Portfolio = () => {
     },
     {
       id: 3,
+      image: chatapp,
+      title: 'Live Chat Application',
+      description: 'A real-time chat application built with Java (Spring Boot) for backend and React for frontend. This app uses WebSockets, STOMP protocol, and MongoDB to provide seamless messaging between users in a chat room. Users can join existing rooms or create new ones, and chat in real-time.',
+      github: 'https://github.com/laxminarayanvyas/chatapp-fullstack',
+      demo: null
+    },
+    {
+      id: 4,
       image: cms,
       title: 'College Management System',
       description: 'A comprehensive system to manage college operations such as student records, courses, and staff details.',
